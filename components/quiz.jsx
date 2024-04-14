@@ -61,7 +61,6 @@ function Quiz() {
     }
 
     const gifSrc = questionGif[currentQuestionIndex];
-    console.log(currentQuestionIndex);
 
     return (
         <div className="flex flex-col items-center justify-center p-4">
