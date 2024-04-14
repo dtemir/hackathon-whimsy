@@ -12,7 +12,7 @@ function Results({ score, total }) {
     };
 
     const handleResults = (resultId, resultValue) => {
-        fetch('/.netlify/functions/mongo:9999', {
+        fetch('/.netlify/functions/mongo', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
