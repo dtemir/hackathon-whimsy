@@ -2,7 +2,7 @@ const { MongoClient } = require('mongodb');
 
 const uri = process.env.MONGODB_URI;
 const client = new MongoClient(uri);
-const clientPromise = await client.connect();
+const clientPromise = client.connect();
 
 exports.handler = async function(event, context) {
   if (event.httpMethod !== 'POST') {
