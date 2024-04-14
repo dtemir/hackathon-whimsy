@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import HackKU from '../public/HackKU.svg'
+import HackKU from '../public/HackKU'
 
 const hackathonImages = {
     HackKU
