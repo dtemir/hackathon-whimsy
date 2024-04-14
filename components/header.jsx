@@ -2,9 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import netlifyLogo from 'public/netlify-logo.svg';
 
-const navItems = [
-    { linkText: 'Home', href: '/' }
-];
+const navItems = [];
 
 export function Header() {
     return (
