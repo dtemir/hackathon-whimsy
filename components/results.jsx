@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HackKU from '../public/HackKU.svg'
 
@@ -7,6 +7,8 @@ const hackathonImages = {
 };
 
 function Results({ maxScoreHackathon }) {
+    const [percentage, setPercentage] = useState(null);
+
     const handleDownload = () => {
         console.log("Download the image");
     };
@@ -26,6 +28,7 @@ function Results({ maxScoreHackathon }) {
         .then(response => response.json())
         .then(data => {
             console.log('Success:', data);
+            setPercentage(data.percentage);
         })
         .catch((error) => {
             console.error('Error:', error);
@@ -44,6 +47,9 @@ function Results({ maxScoreHackathon }) {
         <div className="flex flex-col items-center justify-center p-4">
             <div className="bg-white p-4 rounded-lg shadow-md w-full max-w-2xl flex flex-col items-center">
                 <Image src={imageSrc} alt={`${maxScoreHackathon}`} className="mb-6" />
+                {percentage !== null && (
+                    <p className="text-lg font-bold mb-4 text-black">You match with {percentage.toFixed(2)}% whose hackathon is {maxScoreHackathon}</p>
+                )}
                 <div className="flex justify-between w-full px-4">
                     <button
                         onClick={handleDownload}
