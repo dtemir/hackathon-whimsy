@@ -1,50 +1,50 @@
 [
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "Opening ceremony just ended and ur about to begin hacking. Your friend Fira walks by and asks which track your hacking on. Which one do you pick?        ",
+        "options": ["Social impact, babee", "General track! (I want headphones)"],
+        "weight_one": ["TreeHacks", "HackMIT", "QWERHacks", "HackKU"],
+        "weight_two": ["HackUIowa", "PennApps", "HackUTD", "Hack the North"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "It's the first night and everyone is LOCKING IN to start their project. You are feeling a lil eepy tho. What do you do?",
+        "options": ["Blow up my air mattress and call it a night zzzzzzz", "What's sleep? #grindsetmindset"],
+        "weight_one": ["QWERHacks", "HackUTD", "HackKU", "HackUIowa"],
+        "weight_two": ["PennApps", "HackMIT", "TreeHacks", "Hack the North"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "Yay! You are super lit for HackKU Day 2! Your friends want to start their day by going to Capture the Flag. But ... there's two? Which one do you go to?",
+        "options": ["REAL Capture the Flag. Let's touch some grass and soak in some sun!", "The one where you stay sitting! [okay you do get to do some cool cybersecurity hacks hehe]"],
+        "weight_one": ["HackUTD", "QWERHacks", "HackKU", "TreeHacks"],
+        "weight_two": ["HackUIowa", "HackMIT", "PennApps", "Hack the North"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "HackKU is going amazing ... that is until someone poses a mind-boggling question: “Would you rather have bears for legs or sharks for arms?!”",
+        "options": ["BEARS FOR LEGS ", "SHARKS FOR ARMS"],
+        "weight_one": ["TreeHacks", "Hack the North", "QWERHacks", "HackUTD"],
+        "weight_two": ["HackMIT", "HackKU", "HackUIowa", "PennApps"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "It's dinner and you just had some amazing Indian food. The organizers are giving out seconds! ... but only if you do a little shimmy! What do you do?",
+        "options": ["Go back to hacking. I'm full!", "Dance to Berries and Cream! Anything for more pakora!"],
+        "weight_one": ["HackUIowa", "PennApps", "HackMIT", "HackUTD"],
+        "weight_two": ["HackKU", "QWERHacks", "Hack the North", "TreeHacks"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "Quick! It's midnight karoake! What song are you singing?",
+        "options": ["Mr. Brightside!!!!!!!!!!!!!", "High School Musical Duet ❤️"],
+        "weight_one": ["HackUIowa", "PennApps", "HackMIT", "HackUTD"],
+        "weight_two": ["HackKU", "QWERHacks", "TreeHacks", "Hack the North"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "The organizers ping the Discord to remind everyone that projects are due at 8 AM !!! When does your team submit your project?",
+        "options": ["2 AM. I'm tryna get some shut-eye so I can enjoy judging!", "7:59:59:59:59:59:59:59 AM"],
+        "weight_one": [],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD", "HackKU", "HackMIT", "PennApps", "QWERHacks"]
     },
     {
-        "question": "Question 1",
-        "options": ["No", "Yes"],
-        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
-        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+        "question": "HackKU was so amazing! Your friend is so hyped that they want to do another hackathon next weekend! Are you going?",
+        "options": ["brain not working must take break", "AYO LET'S GO"],
+        "weight_one": ["PennApps", "HackUIowa", "QWERHacks", "HackMIT"],
+        "weight_two": ["HackKU", "Hack the North", "HackUTD", "TreeHacks"]
     }
 ]

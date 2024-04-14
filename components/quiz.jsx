@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import quizData from '../public/quizData.json';
 import Results from './results';
+import question1 from '../public/question1.gif'
 
 function Quiz() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
