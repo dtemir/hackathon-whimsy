@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import Image from 'next/image';
 import hackKU from '../public/hackku.svg'
 
-function Results({ score, total }) {
+function Results({ maxScoreHackathon }) {
     const handleDownload = () => {
         console.log("Download the image");
     };
@@ -28,12 +28,11 @@ function Results({ score, total }) {
         });
     };
 
-    // Use useEffect to trigger handleResults when the component mounts
     useEffect(() => {
-        const resultId = Date.now().toString();  // Generate a unique ID for this result
-        const resultValue = `Score: ${score}, Total: ${total}`;  // Example result value
+        const resultId = Date.now().toString();
+        const resultValue = `${maxScoreHackathon}`;
         handleResults(resultId, resultValue);
-    }, [score, total]);  
+    }, [maxScoreHackathon]);  
 
     return (
         <div className="flex flex-col items-center justify-center p-4">

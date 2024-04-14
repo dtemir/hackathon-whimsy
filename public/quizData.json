@@ -1,12 +1,50 @@
 [
     {
-        "question": "What is the capital of France?",
-        "options": ["Paris", "London"],
-        "answer": "Paris"
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
     },
     {
-        "question": "What is 2 + 2?",
-        "options": ["3", "4"],
-        "answer": "4"
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
+    },
+    {
+        "question": "Question 1",
+        "options": ["No", "Yes"],
+        "weight_one": ["HackKU", "HackMIT", "PennApps", "QWERHacks"],
+        "weight_two": ["Hack the North", "HackUIowa", "TreeHacks", "HackUTD"]
     }
 ]

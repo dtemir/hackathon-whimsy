@@ -1,28 +1,43 @@
 'use client'
-import React, { useState } from 'react';
-import quizData from '../public/quizData.json'; // Adjust the path according to your project structure
-import Results from './results'; // Adjust the path according to your project structure
+import React, { useState, useEffect } from 'react';
+import quizData from '../public/quizData.json';
+import Results from './results';
 
 function Quiz() {
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
     const [userAnswers, setUserAnswers] = useState([]);
     const [completed, setCompleted] = useState(false);
+    const [scores, setScores] = useState({});
 
-    const handleOptionSelect = (option) => {
+    const handleOptionSelect = (optionIndex) => {
         const newAnswers = [...userAnswers];
-        newAnswers[currentQuestionIndex] = option;
+        newAnswers[currentQuestionIndex] = quizData[currentQuestionIndex].options[optionIndex];
         setUserAnswers(newAnswers);
+
+        const weights = optionIndex === 0 ? quizData[currentQuestionIndex].weight_one : quizData[currentQuestionIndex].weight_two;
+        const newScores = { ...scores };
+        weights.forEach((hackathon, index) => {
+            const points = weights.length - index;
+            newScores[hackathon] = (newScores[hackathon] || 0) + points;
+        });
+        setScores(newScores);
 
         const nextQuestionIndex = currentQuestionIndex + 1;
         if (nextQuestionIndex < quizData.length) {
             setCurrentQuestionIndex(nextQuestionIndex);
         } else {
             setCompleted(true);
+            console.log("Final Scores:", newScores);
         }
     };
 
+    useEffect(() => {
+        console.log("Current Scores:", scores);
+    }, [scores]);
+
     if (completed) {
-        return <Results />;
+        const maxScoreHackathon = Object.keys(scores).reduce((a, b) => scores[a] > scores[b] ? a : b);
+        return <Results maxScoreHackathon={maxScoreHackathon} />;
     }
 
     return (
@@ -33,8 +48,8 @@ function Quiz() {
                     {quizData[currentQuestionIndex].options.map((option, index) => (
                         <button
                             key={index}
-                            onClick={() => handleOptionSelect(option)}
-                            className="bg-white p-3 rounded-lg shadow text-black hover:bg-cyan-100 border-2 border-cyan-100"  // Added colorful border
+                            onClick={() => handleOptionSelect(index)}
+                            className="bg-white p-3 rounded-lg shadow text-black hover:bg-cyan-100 border-2 border-cyan-100"
                         >
                             {option}
                         </button>
