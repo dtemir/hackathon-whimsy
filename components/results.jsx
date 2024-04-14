@@ -1,4 +1,6 @@
 import React from 'react';
+import Image from 'next/image';
+import hackKU from '../public/hackku.svg'
 
 function Results({ score, total }) {
     const handleDownload = () => {
@@ -13,19 +15,18 @@ function Results({ score, total }) {
 
     return (
         <div className="flex flex-col items-center justify-center p-4">
-            <div className="bg-blue-200 p-4 rounded-lg shadow-md w-full max-w-md">
-                <h2 className="text-lg font-bold mb-4">Your Score: {score}/{total}</h2>
-                <img src="path_to_your_image.jpg" alt="Result Image" className="mb-4" />
-                <div className="flex space-x-4">
+            <div className="bg-white p-4 rounded-lg shadow-md w-full max-w-2xl flex flex-col items-center">  // Changed max-w-md to max-w-2xl
+                <Image src={hackKU} alt="HackKU" className="mb-6" />
+                <div className="flex justify-between w-full px-4">
                     <button
                         onClick={handleDownload}
-                        className="bg-white p-3 rounded-lg shadow text-blue-900 hover:bg-blue-100"
+                        className="bg-white p-3 rounded-lg shadow text-black hover:bg-cyan-100 border-2 border-cyan-100 flex-grow mr-2"
                     >
                         Download
                     </button>
                     <button
                         onClick={handleShare}
-                        className="bg-white p-3 rounded-lg shadow text-blue-900 hover:bg-blue-100"
+                        className="bg-white p-3 rounded-lg shadow text-black hover:bg-cyan-100 border-2 border-cyan-100 flex-grow ml-2"
                     >
                         Share
                     </button>
