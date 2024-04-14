@@ -42,6 +42,13 @@ function Quiz() {
         });
         setScores(newScores);
 
+        // Liars!
+        if (currentQuestionIndex === 6 && optionIndex === 1) {
+            alert('Impossible!');
+            window.location.href = 'https://www.youtube.com/watch?v=dQw4w9WgXcQ';
+            return; // Prevent further execution
+        }
+
         const nextQuestionIndex = currentQuestionIndex + 1;
         if (nextQuestionIndex < quizData.length) {
             setCurrentQuestionIndex(nextQuestionIndex);
