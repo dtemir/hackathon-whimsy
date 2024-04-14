@@ -1,8 +1,8 @@
-// netlify/functions/handleResults.js
 const { MongoClient } = require('mongodb');
 
 const uri = process.env.MONGODB_URI;
-const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
+const client = new MongoClient(uri);
+const clientPromise = await client.connect();
 
 exports.handler = async function(event, context) {
   if (event.httpMethod !== 'POST') {
@@ -13,12 +13,13 @@ exports.handler = async function(event, context) {
     const body = JSON.parse(event.body);
     const { resultId, resultValue } = body;
 
-    await client.connect();
-    const db = client.db(process.env.MONGODB_DB);
-    await db.collection('results').insertOne({ resultId, resultValue });
+    const db = (await clientPromise).db(process.env.MONGODB_DB);
+    const collection = await db.collection('results')
+    
+    await collection.insertOne({ resultId, resultValue });
 
-    const totalResults = await db.collection('results').countDocuments();
-    const similarResults = await db.collection('results').countDocuments({ resultValue });
+    const totalResults = await collection.countDocuments();
+    const similarResults = await collection.countDocuments({ resultValue });
     const percentage = (similarResults / totalResults) * 100;
 
     return {
