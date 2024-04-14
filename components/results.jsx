@@ -24,11 +24,37 @@ function Results({ maxScoreHackathon }) {
     const [percentage, setPercentage] = useState(null);
 
     const handleDownload = () => {
-        console.log("Download the image");
+        const imageSrc = hackathonImages[maxScoreHackathon].src;
+        fetch(imageSrc)
+            .then(response => response.blob())
+            .then(blob => {
+                const url = window.URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.style.display = 'none';
+                a.href = url;
+                a.download = `${maxScoreHackathon}.svg`; // Assuming the images are SVGs
+                document.body.appendChild(a);
+                a.click();
+                window.URL.revokeObjectURL(url);
+                document.body.removeChild(a);
+            })
+            .catch(() => alert('Could not download the image'));
     };
 
     const handleShare = () => {
-        console.log("Share on social media");
+        if (navigator.share) {
+            navigator.share({
+                title: `My Hackathon Match - ${maxScoreHackathon}`,
+                text: `I match ${percentage.toFixed(2)}% with ${maxScoreHackathon}! Check it out!`,
+                url: document.location.href
+            }).then(() => {
+                console.log('Thanks for sharing!');
+            }).catch((error) => {
+                console.error('Error sharing:', error);
+            });
+        } else {
+            alert('Web Share API is not supported in your browser.');
+        }
     };
 
     const handleResults = (resultId, resultValue) => {
