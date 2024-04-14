@@ -1,9 +1,23 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import HackKU from '../public/hackku.svg'
+import HackMIT from '../public/hackmit.svg'
+import PennApps from '../public/pennapps.svg'
+import HackTheNorth from '../public/hackthenorth.svg'
+import HackUIowa from '../public/hackuiowa.svg'
+import HackUTD from '../public/hackutd.svg'
+import TreeHacks from '../public/treehacks.svg'
+import QWERHacks from '../public/qwerhacks.svg'
 
 const hackathonImages = {
-    HackKU
+    HackKU,
+    HackMIT,
+    PennApps,
+    HackTheNorth,
+    HackUIowa,
+    HackUTD,
+    TreeHacks,
+    QWERHacks
 };
 
 function Results({ maxScoreHackathon }) {
