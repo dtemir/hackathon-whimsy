@@ -34,6 +34,6 @@ exports.handler = async function(event, context) {
             body: JSON.stringify({ error: 'Failed to process results', details: error.message })
         };
     } finally {
-        await client.close();  // Ensure the client is closed after operations are complete
+        await client.close();
     }
 };

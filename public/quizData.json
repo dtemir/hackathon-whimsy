@@ -39,7 +39,7 @@
         "question": "The organizers ping the Discord to remind everyone that projects are due at 8 AM !!! When does your team submit your project?",
         "options": ["2 AM. I'm tryna get some shut-eye so I can enjoy judging!", "7:59:59:59:59:59:59:59 AM"],
         "weight_one": [],
-        "weight_two": ["HackTheNorth", "HackUIowa", "TreeHacks", "HackUTD", "HackKU", "HackMIT", "PennApps", "QWERHacks"]
+        "weight_two": []
     },
     {
         "question": "HackKU was so amazing! Your friend is so hyped that they want to do another hackathon next weekend! Are you going?",
