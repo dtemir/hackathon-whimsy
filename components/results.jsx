@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Image from 'next/image';
 import hackKU from '../public/hackku.svg'
 
@@ -10,6 +10,30 @@ function Results({ score, total }) {
     const handleShare = () => {
         console.log("Share on social media");
     };
+
+    const handleResults = (resultId, resultValue) => {
+        fetch('/.netlify/functions/mongo:9999', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ resultId, resultValue })
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log('Success:', data);
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+        });
+    };
+
+    // Use useEffect to trigger handleResults when the component mounts
+    useEffect(() => {
+        const resultId = Date.now().toString();  // Generate a unique ID for this result
+        const resultValue = `Score: ${score}, Total: ${total}`;  // Example result value
+        handleResults(resultId, resultValue);
+    }, [score, total]);  
 
     return (
         <div className="flex flex-col items-center justify-center p-4">
