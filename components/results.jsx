@@ -4,18 +4,16 @@ import hackKU from '../public/hackku.svg'
 
 function Results({ score, total }) {
     const handleDownload = () => {
-        // Logic to download the image
         console.log("Download the image");
     };
 
     const handleShare = () => {
-        // Logic to share on social media
         console.log("Share on social media");
     };
 
     return (
         <div className="flex flex-col items-center justify-center p-4">
-            <div className="bg-white p-4 rounded-lg shadow-md w-full max-w-2xl flex flex-col items-center">  // Changed max-w-md to max-w-2xl
+            <div className="bg-white p-4 rounded-lg shadow-md w-full max-w-2xl flex flex-col items-center">
                 <Image src={hackKU} alt="HackKU" className="mb-6" />
                 <div className="flex justify-between w-full px-4">
                     <button

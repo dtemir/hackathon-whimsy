@@ -1,5 +1,5 @@
 'use state'
-import Quiz from '../components/quiz';  // Adjust the path as necessary based on your project structure
+import Quiz from '../components/quiz';
 
 export default function Page() {
     return (
