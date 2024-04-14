@@ -3,11 +3,7 @@ import Link from 'next/link';
 import netlifyLogo from 'public/netlify-logo.svg';
 
 const navItems = [
-    { linkText: 'Home', href: '/' },
-    { linkText: 'Revalidation', href: '/revalidation' },
-    { linkText: 'Image CDN', href: '/image-cdn' },
-    { linkText: 'Edge Function', href: '/edge' },
-    { linkText: 'Blobs', href: '/blobs' }
+    { linkText: 'Home', href: '/' }
 ];
 
 export function Header() {

@@ -1,6 +1,5 @@
 import Link from 'next/link';
 import { Card } from 'components/card';
-import { RandomQuote } from 'components/random-quote';
 import { Markdown } from 'components/markdown';
 import { ContextAlert } from 'components/context-alert';
 import { getNetlifyContext } from 'utils';
@@ -47,12 +46,6 @@ export default function Page() {
                     <RuntimeContextCard />
                 </section>
             )}
-            <section className="flex flex-col gap-4">
-                <Markdown content={preDynamicContentExplainer} />
-                <RandomQuote />
-                <Markdown content={postDynamicContentExplainer} />
-            </section>
-            {/* !!cards?.length && <CardsGrid cards={cards} /> */}
         </main>
     );
 }
