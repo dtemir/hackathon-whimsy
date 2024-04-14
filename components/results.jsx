@@ -1,6 +1,10 @@
 import React, { useEffect } from 'react';
 import Image from 'next/image';
-import hackKU from '../public/hackku.svg'
+import HackKU from '../public/HackKU.svg'
+
+const hackathonImages = {
+    HackKU
+};
 
 function Results({ maxScoreHackathon }) {
     const handleDownload = () => {
@@ -34,10 +38,12 @@ function Results({ maxScoreHackathon }) {
         handleResults(resultId, resultValue);
     }, [maxScoreHackathon]);  
 
+    const imageSrc = hackathonImages[maxScoreHackathon];
+
     return (
         <div className="flex flex-col items-center justify-center p-4">
             <div className="bg-white p-4 rounded-lg shadow-md w-full max-w-2xl flex flex-col items-center">
-                <Image src={hackKU} alt="HackKU" className="mb-6" />
+                <Image src={imageSrc} alt={`${maxScoreHackathon}`} className="mb-6" />
                 <div className="flex justify-between w-full px-4">
                     <button
                         onClick={handleDownload}
